@@ -59,12 +59,3 @@ app.get("/flag", (req, res) => {
 });
 
 app.listen(3003, "0.0.0.0");
-
-app.on("listening", onListening);
-
-
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
-  debug("Listening on " + bind);
-}
