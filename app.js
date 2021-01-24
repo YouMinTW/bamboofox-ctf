@@ -74,7 +74,7 @@ app.get("/flag", (req, res) => {
     userData.isAdmin = req.cookies.admin;
     userData.token = secret.ADMIN_TOKEN;
   }
-
+  console.log(`remoteAddress is ${req.connection.remoteAddress}`)
   if (
     req.query.token &&
     req.query.token.match(/[0-9a-f]{16}/) &&
